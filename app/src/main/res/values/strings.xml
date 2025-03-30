@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Starbuzz</string>
+    <string name="starbuzz_logo">Starbuzz logo</string>
+
+    <string-array name="options">
+        <item>Drinks</item>
+        <item>Food</item>
+        <item>Stores</item>
+        <item>Form</item>
+        <item>Pets</item>
+    </string-array>
+
+    <string-array name="list">
+        <item>Latte</item>
+        <item>Capuccino</item>
+        <item>Filter</item>
+    </string-array>
+
+    <string-array name="dogs">
+        <item>Cachorro</item>
+        <item>Adulto</item>
+    </string-array>
+
+    <string-array name="stores">
+        <item>Principal Location</item>
+        <item>Cold Location</item>
+        <item>Mountain Location</item>
+    </string-array>
+
+    <string-array name="kgs">
+        <item>500 g</item>
+        <item>1.5 kg</item>
+        <item>8 kg</item>
+    </string-array>
+</resources>
