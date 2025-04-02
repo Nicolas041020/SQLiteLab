@@ -1,7 +1,10 @@
 package co.edu.unipiloto.starbuzz;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.Nullable;
@@ -20,6 +23,7 @@ public class ViewPetsActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private PetAdapter adapter;
     private List<Pet> petList;
+    private Button btnBack;
     private StarbuzzDatabaseHelper dbHelper;
 
     @Override
@@ -28,6 +32,14 @@ public class ViewPetsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view_pets);
 
         recyclerView = findViewById(R.id.recyclerViewPets);
+        btnBack = findViewById(R.id.back);
+        btnBack.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(ViewPetsActivity.this,TopLevelActivity.class);
+                startActivity(intent);
+            }
+        });
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         dbHelper = new StarbuzzDatabaseHelper(this);

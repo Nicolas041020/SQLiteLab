@@ -29,7 +29,7 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Pet pet = petList.get(position);
         holder.nameTextView.setText(pet.getName());
-        holder.descriptionTextView.setText(pet.getDescription());
+        holder.descriptionTextView.setText("Descripcion: " + pet.getDescription());
         holder.ownerTextView.setText("Dueño: " + pet.getOwner());
     }
 

@@ -1,5 +1,6 @@
 package co.edu.unipiloto.starbuzz;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -18,8 +19,8 @@ import androidx.core.view.WindowInsetsCompat;
 public class RegisterPetActivity extends AppCompatActivity {
 
     private EditText name,desc,nameuser;
-    StarbuzzDatabaseHelper dbHelper;
-    SQLiteDatabase db;
+    private StarbuzzDatabaseHelper dbHelper;
+    private SQLiteDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,8 @@ public class RegisterPetActivity extends AppCompatActivity {
         } else {
             StarbuzzDatabaseHelper.insertPet(db, nameStr, description, owner);
             Toast.makeText(RegisterPetActivity.this, "Mascota guardada correctamente", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(RegisterPetActivity.this, TopLevelActivity.class);
+            startActivity(intent);
             name.setText("");
             desc.setText("");
             nameuser.setText("");
